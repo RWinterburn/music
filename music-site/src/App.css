@@ -35,7 +35,7 @@
   }
 }
 
-body {background: linear-gradient(to bottom, blue, green);
+body {background: linear-gradient(to bottom, rgb(255, 153, 0), rgb(82, 0, 71));
   height: 100vh;
   width: 100vw;
 }
@@ -71,7 +71,7 @@ body {background: linear-gradient(to bottom, blue, green);
 }
 
 #Abbey {
-  top:25%;
+  top:30%;
   background-image: url("./images/Abbey.png");
   z-index: -40;
   width: 25%;
@@ -84,12 +84,12 @@ body {background: linear-gradient(to bottom, blue, green);
   background-image: url("./images/River.png");
   width: 50%;
   height: 50%;
-  top: 45%;
+  top: 50%;
   left:-7%;
 }
 
 #Farm {
-  top:10%;
+  top:25%;
   background-image: url("./images/Farm.png");
   left: 48%;
   height: 75%;
