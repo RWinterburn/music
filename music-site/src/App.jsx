@@ -12,7 +12,7 @@ function App() {
         <ParallaxLayer offset={0} speed={0.3}>
           <div class="animation_layer parallax" id="River"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={-0.1}>
+        <ParallaxLayer offset={0} speed={-0.4}>
           <div class="animation_layer parallax" id="Farm"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.3}>
