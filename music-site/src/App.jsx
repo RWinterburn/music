@@ -4,13 +4,17 @@ import Background from './components/Background';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Content from './components/Content';
+import './App.css'
 
 function App() {
   return (
     <Router> {/* Wrap everything in Router */}
+      
       <div className="app-container">
-         {/* Persistent background */}
+        {/* Persistent background */}
         <Navbar />
+        <Background />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -23,3 +27,4 @@ function App() {
 }
 
 export default App;
+

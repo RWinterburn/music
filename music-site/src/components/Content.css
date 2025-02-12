@@ -1,0 +1,6 @@
+.page-content {
+    position: absolute;
+    padding: 20px; /* Add some space around the content */
+    z-index: 10; /* Ensure content is on top of background */
+  }
+  

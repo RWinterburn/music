@@ -5,7 +5,7 @@ import './Background.css'; // Use a separate CSS file for styles
 
 
 function Background() {
-  return (
+  return (<div className='background'>
     <Parallax pages={3} style={{ top: '0', left: '0' }} className="animation">
 
 <ParallaxLayer offset={0} speed={0} className="top-gradient-layer">
@@ -13,7 +13,7 @@ function Background() {
   </ParallaxLayer>
 
       {/* Abbey and Fields at the Top */}
-      <ParallaxLayer offset={0} speed={0}>
+      <ParallaxLayer offset={0} speed={0.25}>
         <div className="animation_layer parallax" id="Abbey"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0.1}>
@@ -43,6 +43,7 @@ function Background() {
       
       
     </Parallax>
+    </div>
   );
 }
 

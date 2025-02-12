@@ -90,25 +90,21 @@ body {
 }
 
 #Farm {
-  top:25%;
+  top:10%;
   background-image: url("./images/Farm.png");
   left: 48%;
   height: 75%;
   width: 75%;
 }
 
-.background {z-index: -1;}
-.app-container {
-  position: relative;
-  z-index: 1;
-}
+
+
 
 .page-content {
-  padding: 20px;
-  text-align: center;
-  color: #fff; /* Ensure text is visible against the background */
-  z-index: 1; /* Make sure the text is on top of the background */
+  position: relative;
+  z-index: 1000; /* Ensure it's above the background */
 }
+
 
 h1 {
   font-size: 3rem;
