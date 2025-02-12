@@ -1,0 +1,91 @@
+.animation, .animation_layer {
+    height: 100vh; /* Make it fill the screen */
+  }
+  
+  .animation {
+    display: block;
+    position: relative;
+    z-index: 0;
+    
+  }
+  
+  .animation_layer {
+    background-position: center;
+    background-size: contain; /* Keep image at its natural size */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Ensure it fills the viewport */
+    position: absolute;
+
+  }
+  
+  .animation_layer.parallax {
+    position: fixed;
+  }
+  
+  #Abbey {
+    top:30%;
+    background-image: url("src/images/Abbey.png");
+    width: 25%;
+    height: 25%;
+    left:-7%;
+    z-index: -3;
+  
+  }
+  
+  #River {
+    background-image: url("src/images/River.png");
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left:-7%;
+    z-index: -3;
+  }
+  
+  #Farm {
+    top:25%;
+    background-image: url("src/images/Farm.png");
+    left: 48%;
+    height: 75%;
+    width: 75%;
+    z-index: -3;
+  }
+  
+#City {top:0%;
+
+  background-image: url("src/images/City.png");
+  align-items: center;
+
+  width: 100vw;
+  z-index: -3;}  
+
+  .gradient-top {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(0, 191, 255), rgb(0, 175, 0));
+    z-index: -3; /* Send it behind other elements */
+  }
+  
+
+
+  .gradient-layer-middle {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,  rgb(0, 175, 0), rgb(124, 0, 97));
+    z-index: -3;
+  }
+
+  .gradient-layer-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,  rgb(124, 0, 97), rgb(0, 0, 0));
+    z-index: -3;
+  }
+
+  
+  /* 🌅 Gradient at the Top */
+
+/* 🔥 Middle Gradient Transition */

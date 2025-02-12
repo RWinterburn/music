@@ -1,33 +1,24 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import TextBlock from './textBlock';
-import './App.css';
-import ContentSection from './components/ContentSection';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-
-
+import Background from './components/Background';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Parallax pages={2} style={{ top: '0', left: '0' }} class="animation">
-        <ParallaxLayer offset={0} speed={0.4}>
-          <div class="animation_layer parallax" id="Abbey"></div>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={0.4}>
-          <div class="animation_layer parallax" id="River"></div>
-        </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={0.6}>
-          <div class="animation_layer parallax" id="Farm"></div>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={0.3}>
-          <div class="animation_layer parallax" id="City"></div>
-        </ParallaxLayer>
-
-      </Parallax>
-      <ContentSection />
-
-    </div>
+    <Router> {/* Wrap everything in Router */}
+      <div className="app-container">
+         {/* Persistent background */}
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        
+      </div>
+    </Router>
   );
 }
 
