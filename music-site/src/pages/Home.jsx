@@ -4,9 +4,8 @@ import Card from "../components/Card";
 function Home() {
   return (
     <div className="page-content">
-      <h1>This took me forever</h1>
-      <p>like ages</p>
-      <Card />
+      <h1>Twin II</h1>
+      <p>2025</p>
     </div>
   );
 }
