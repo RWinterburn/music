@@ -1,5 +1,8 @@
+/* Dark overlay to dim the background */
+
+
 .animation, .animation_layer { 
-    height: 100vh; /* Make it fill the screen */
+    height: 100%; /* Make it fill the screen */
   }
   
   .animation {
@@ -28,6 +31,17 @@
     background-image: url("src/images/Abbey.png");
     width: 25%;
     height: 25%;
+    left:-7%;
+    z-index: -3;
+  
+  
+  }
+
+  #Horizon {
+    top:32%;
+    background-image: url("src/images/Horizon.png");
+    width:100%;
+    
     left:-7%;
     z-index: -3;
   
@@ -86,9 +100,53 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, rgb(168, 2, 132), rgb(156, 0, 0));
+    background: linear-gradient(to bottom, rgb(168, 2, 132), rgb(19, 0, 0));
     z-index: -3;
   }
+
+  .parallax-layer-2 {
+    position: absolute;
+    top: 50%;
+    left: 100vw; /* Start off-screen */
+    width: 300px;
+    height: 200px;
+    animation: moveParallax 200s linear infinite;
+  }
+    
+  #Cloud {
+    top:30%;
+    background-image: url("src/images/Cloud.png");
+    width: 25%;
+    height: 25%;
+    left:50%;
+    z-index: -3;
+    background-repeat: no-repeat;
+  
+  
+  }
+  #Cloud-other {
+    top:10%;
+    width: 100%;
+    background-image: url("src/images/Cloud-other.png");
+    animation: moveParallax 200s linear infinite;
+  
+    
+    
+    z-index: -3;
+    background-repeat: no-repeat;
+  
+  
+  }
+  
+  @keyframes moveParallax {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100vw); /* Moves it far left off-screen */
+    }
+  }
+  
 
   .background {z-index: -100;}
   /* 🌅 Gradient at the Top */
