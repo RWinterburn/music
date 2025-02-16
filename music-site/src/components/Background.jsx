@@ -1,11 +1,14 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './Background.css'; // Use a separate CSS file for styles
+import DarkOverlay from "./DarkOverlay";
+
 
 
 
 
 function Background() {
   return (<div className='background'>
+    <DarkOverlay />
     <Parallax pages={3} style={{ top: '0', left: '0' }} className="animation">
 <ParallaxLayer offset={0} speed={0} className="top-gradient-layer">
     <div className="gradient-top"></div>

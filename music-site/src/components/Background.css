@@ -1,154 +1,134 @@
 /* Dark overlay to dim the background */
+.animation, .animation_layer {
+  height: 100%;
+  width: 100%;  /* Ensure they fill the screen */
+}
 
+.animation {
+  display: block;
+  position: absolute; /* Allow scrolling with content */
+  z-index: -1000;  /* Ensure it's below content */
+}
 
-.animation, .animation_layer { 
-    height: 100%; /* Make it fill the screen */
-  }
-  
-  .animation {
-    display: block;
-    position: relative;
-    z-index: 0;
-    
-  }
-  
-  .animation_layer {
-    background-position: center;
-    background-size: contain; /* Keep image at its natural size */
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh; /* Ensure it fills the viewport */
-    position: absolute;
+.animation_layer {
+  background-position: center;
+  background-size: contain; /* Keep image at its natural size */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300vh; /* Make it taller than the viewport to allow scrolling */
+  position: absolute;
+  animation: scrollUpDown 10s linear infinite; /* Scroll animation */
+}
 
-  }
-  
-  .animation_layer.parallax {
-    position: fixed;
-  }
-  
-  #Abbey {
-    top:30%;
-    background-image: url("src/images/Abbey.png");
-    width: 25%;
-    height: 25%;
-    left:-7%;
-    z-index: -3;
-  
-  
-  }
+/* Scroll animation */
 
-  #Horizon {
-    top:32%;
-    background-image: url("src/images/Horizon.png");
-    width:100%;
-    
-    left:-7%;
-    z-index: -3;
-  
-  
-  }
-  
-  #River {
-    background-image: url("src/images/River.png");
-    width: 50%;
-    height: 50%;
-    top: 50%;
-    left:-7%;
-    z-index: -3;
- 
-  }
-  
-  #Farm {
+/* Set each element with a background image */
+#Abbey {
+  top: 30%;
+  background-image: url("src/images/Abbey.png");
+  width: 25%;
+  height: 25%;
+  left: -7%;
+  z-index: -3;
+}
 
-    background-image: url("src/images/Farm.png");
-    left: 48%;
-    height: 75%;
-    width: 75%;
-    z-index: -3;
-    
-  }
-  
-#City {top:0%;
+#Horizon {
+  top: 32%;
+  background-image: url("src/images/Horizon.png");
+  width: 100%;
+  left: -7%;
+  z-index: -3;
+}
 
+#River {
+  background-image: url("src/images/River.png");
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: -7%;
+  z-index: -3;
+}
+
+#Farm {
+  background-image: url("src/images/Farm.png");
+  left: 48%;
+  height: 75%;
+  width: 75%;
+  z-index: -3;
+}
+
+#City {
   background-image: url("src/images/City.png");
-  align-items: center;
- 
-
-
   width: 100vw;
-  z-index: -3;}  
+  z-index: -3;
+  position: absolute;/* Initially hidden */ /* Animation to show city */
+}
 
-  .gradient-top {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, rgb(150, 1, 155), rgb(175, 163, 0));
-    z-index: -3; /* Send it behind other elements */
-  }
-  
+/* Animation to show the city after scroll */
 
 
-  .gradient-layer-middle {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom,  rgb(175, 163, 0), rgb(168, 2, 132));
-    z-index: -3;
-  }
+/* Gradient layers */
+.gradient-top {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(150, 1, 155), rgb(175, 163, 0));
+  z-index: -3;
+}
 
-  .gradient-layer-bottom {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, rgb(168, 2, 132), rgb(19, 0, 0));
-    z-index: -3;
-  }
+.gradient-layer-middle {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(175, 163, 0), rgb(168, 2, 132));
+  z-index: -3;
+}
 
-  .parallax-layer-2 {
-    position: absolute;
-    top: 50%;
-    left: 100vw; /* Start off-screen */
-    width: 300px;
-    height: 200px;
-    animation: moveParallax 200s linear infinite;
-  }
-    
-  #Cloud {
-    top:30%;
-    background-image: url("src/images/Cloud.png");
-    width: 25%;
-    height: 25%;
-    left:50%;
-    z-index: -3;
-    background-repeat: no-repeat;
-  
-  
-  }
-  #Cloud-other {
-    top:10%;
-    width: 100%;
-    background-image: url("src/images/Cloud-other.png");
-    animation: moveParallax 200s linear infinite;
-  
-    
-    
-    z-index: -3;
-    background-repeat: no-repeat;
-  
-  
-  }
-  
-  @keyframes moveParallax {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100vw); /* Moves it far left off-screen */
-    }
-  }
-  
+.gradient-layer-bottom {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(168, 2, 132), rgb(19, 0, 0));
+  z-index: -3;
+}
 
-  .background {z-index: -100;}
-  /* 🌅 Gradient at the Top */
+/* Clouds */
+.parallax-layer-2 {
+  position: absolute;
+  top: 50%;
+  left: 100vw; /* Start off-screen */
+  width: 300px;
+  height: 200px;
+  animation: moveParallax 200s linear infinite;
+}
 
-/* 🔥 Middle Gradient Transition */
+#Cloud {
+  top: 30%;
+  background-image: url("src/images/Cloud.png");
+  width: 25%;
+  height: 25%;
+  left: 50%;
+  z-index: -3;
+  background-repeat: no-repeat;
+  animation: moveParallax 200s linear infinite;
+}
+
+#Cloud-other {
+  top: 10%;
+  width: 100%;
+  background-image: url("src/images/Cloud-other.png");
+  animation: moveParallax 200s linear infinite;
+  z-index: -3;
+  background-repeat: no-repeat;
+}
+
+@keyframes moveParallax {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
