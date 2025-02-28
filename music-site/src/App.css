@@ -74,6 +74,7 @@ body {
 
 /* Ensuring that sections are positioned above the background */
 .page-content {
+  background: rgba(0, 0, 0, 0.6);
   position: relative; /* Keeps it in the flow of the page */
   z-index: 10; /* Ensures it’s above the background */
   padding: 20px;
@@ -81,6 +82,7 @@ body {
 }
 
 .section {
+
   background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
   padding: 20px;
   margin-bottom: 20px;
@@ -92,7 +94,7 @@ body {
 
 /* Section 1 */
 .section-one {
-  background-color: rgba(0, 0, 255, 0.6); /* Blue background */
+  background-color: rgba(255, 0, 221, 0.6); /* Blue background */
 }
 
 /* Section 2 */

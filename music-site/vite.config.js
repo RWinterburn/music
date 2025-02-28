@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   
     server: {
-      allowedHosts: ['5173-rwinterburn-music-bpeht9zozk2.ws-eu117.gitpod.io'],
+      allowedHosts: ["5173-rwinterburn-music-bpeht9zozk2.ws-eu118.gitpod.io"],
     },
 })

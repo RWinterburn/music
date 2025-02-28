@@ -6,12 +6,13 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Content from './components/Content';
 import './App.css'
+import SpotifySingles from './components/SpotifySingles';
 
 
 function App() {
   return (
     <Router> {/* Wrap everything in Router */}
-      <Background />
+      
       <div className="app-container">
       
         {/* Persistent background */}
@@ -21,8 +22,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/singles" element={<SpotifySingles />} />
         </Routes>
-           
+        <Background />
       </div>
       
     </Router>

@@ -6,25 +6,9 @@ function Home() {
   return (
     <div className="page-content">
       <h1>Twin II</h1>
-      <p>2025</p>
-
-      {/* Section 1 */}
-      <div className="section section-one">
-        <h2>Section One</h2>
-        <p>Content for the first section.</p>
-      </div>
-
-      {/* Section 2 */}
-      <div className="section section-two">
-        <h2>Section Two</h2>
-        <p>Content for the second section.</p>
-      </div>
-
-      {/* Section 3 */}
-      <div className="section section-three">
-        <h2>Section Three</h2>
-        <p>Content for the third section.</p>
-      </div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptates sed perferendis corporis facere obcaecati impedit unde necessitatibus sint ea similique reprehenderit vel consequatur ratione voluptas dolores, possimus quo dolore.2025 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui repellendus, eaque voluptates natus, aspernatur libero soluta quia repellat adipisci porro dolor aliquid ipsum non! Sint distinctio vitae provident pariatur nam!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis voluptate natus fugiat laborum, corrupti iusto et quidem distinctio laboriosam temporibus quod neque odio consectetur non reprehenderit cum incidunt, voluptates tenetur.
+      </p>
     </div>
   );
 }
